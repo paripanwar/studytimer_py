@@ -1,0 +1,34 @@
+import time
+
+print("🌷 Welcome to Study Timer 🌷")
+
+study_minutes = int(input("Enter study time in minutes: "))
+break_minutes = int(input("Enter break time in minutes: "))
+
+print("\n📚 Study session starting!")
+print("Focus and do your best! ✨")
+
+study_seconds = study_minutes * 60
+
+while study_seconds > 0:
+    minutes = study_seconds // 60
+    seconds = study_seconds % 60
+
+    print(f"\r⏳ Study Time: {minutes:02d}:{seconds:02d}", end="")
+    time.sleep(1)
+    study_seconds -= 1
+
+print("\n\n🎉 Study session completed!")
+print("Take a short break. You earned it! 💗")
+
+break_seconds = break_minutes * 60
+
+while break_seconds > 0:
+    minutes = break_seconds // 60
+    seconds = break_seconds % 60
+
+    print(f"\r☕ Break Time: {minutes:02d}:{seconds:02d}", end="")
+    time.sleep(1)
+    break_seconds -= 1
+
+print("\n\n✨ Break completed! Ready for another session?")
